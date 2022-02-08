@@ -42,8 +42,7 @@ MVP:
 - As a user, I want an animation that indicates my tomagotchi has died
 
 Wire Frame Link: https://www.figma.com/file/lRsiWyeFkgdfn9Tf7WtZC5/Untitled?node-id=1%3A2
-
-
+<!-- Can't figure out how to imbed the actual image :/ -->
 
 
 
