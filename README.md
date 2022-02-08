@@ -41,7 +41,7 @@ MVP:
 
 - As a user, I want an animation that indicates my tomagotchi has died
 
-Wire Frame Link: https://www.figma.com/file/lRsiWyeFkgdfn9Tf7WtZC5/Untitled?node-id=1%3A2
+Wire Frame Link: <img width="337" alt="Screen Shot 2022-02-07 at 10 30 32 PM" src="https://user-images.githubusercontent.com/97814056/153038668-786d8173-7263-4630-9e68-9ce1f23ff74d.png">
 <!-- Can't figure out how to imbed the actual image :/ -->
 
 
