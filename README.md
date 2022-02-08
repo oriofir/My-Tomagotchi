@@ -39,6 +39,8 @@ MVP:
 
 - As a user, I want my pet to change animation every 60 years if an adult, so that it becomes a senior 
 
+- As a user, I want an animation that indicates my tomagotchi has died
+
 Wire Frame Link: https://www.figma.com/file/lRsiWyeFkgdfn9Tf7WtZC5/Untitled?node-id=1%3A2
 
 
