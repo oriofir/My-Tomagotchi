@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-     initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/main.css">
+
+    <!-- Jquery Scripts -->
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+
+<!-- Scripts -->
+    <script src="scripts/app.js" defer></script>
+    
     <title>My Little Demon</title>
 </head>
 <body>
+    <header class="My-Tomagotchi">
+        <h1>NAME: BEELZEBUB</h1>
+    </header>
+   
     <main class="tomagotchi">
+        
+        <!-- Screen -->
     <section class="screen">
         <figure>
         <div id="animation">
@@ -18,7 +36,9 @@
             <img src="" alt="senior demon">
         </div>
         </figure>
-    </section>  
+    </section> 
+    
+    <!-- Stats -->
     <section class="stats-main">
             <div class="age">
                 <h2 id="age">
@@ -41,20 +61,34 @@
                 </h3>
             </div>
     </section>
+
+    <!-- buttons -->
     <section class="buttons">
         <div class="feed">
             <button class="feed">
                 <h3 id="feed-me">
-                    FEED
+                    FEED BLOOD
                 </h3>
             </button>
         </div>
-        
-
-    </section>
+        <div class="soul-suck">
+            <button class="soul-suck">
+                <h3 id="soul-suck">
+                    SUCK SOUL
+                </h3>
+            </button>
+        </div>
+        <div class="murder">
+            <button class="murder">
+                <h3 id="murder">
+                    MURDER 
+                </h3>
+            </button>
+        </div>
+</section>
     
     
     
-    </main>       
+</main>       
 </body>
 </html>
