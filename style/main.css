@@ -1,4 +1,18 @@
 * {
     box-sizing: border-box;
-    background-color: aqua;
+    background-color: grey;
+}
+
+body {
+    display: flex;
+    min-height: 1000px;
+    max-height: 1500px;
+
+}
+
+.buttons{
+    display: flex;
+    flex-direction: columns;
+    padding: 20px;
+
 }
