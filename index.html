@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links -->
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/98.css"
+>
     <!-- CSS -->
     <link rel="stylesheet" href="style/main.css">
 
@@ -22,20 +28,29 @@
 <body>
     <header class="My-Tomagotchi">
         <h1>NAME: BEELZEBUB</h1>
+        <button class="start">Start Game</button>
     </header>
    
     <main class="tomagotchi">
         
         <!-- Screen -->
     <section class="screen">
-        <figure>
-        <div id="animation">
-            <img src="" alt="baby demon">
-            <img src="" alt="teenage demon">
-            <img src="" alt="adult demon">
-            <img src="" alt="senior demon">
+        <figure class="animation">
+        <div class="baby-demon">
+            <img src="https://c.tenor.com/UWSFumXilO4AAAAC/devil-child.gif" alt="baby demon">
+        </div>
+        <div class="teenage-demon">
+            <img src="https://c.tenor.com/XFxjYA5cMWkAAAAC/devil-satan.gif" alt="teenage demon">
+        </div>
+        <div class="adult-demon">
+            <img src="https://c.tenor.com/klaSh-3DkeAAAAAC/red-devil.gif" alt="adult demon">
+        </div>
+        <div class="senior-demon">
+            <img src=https://c.tenor.com/zmLTHkbjCYoAAAAd/nioh2-monster.gif alt="senior demon">
+        </div>
         </div>
         </figure>
+        <div class="game-over"></div>
     </section> 
     
     <!-- Stats -->
@@ -65,25 +80,13 @@
     <!-- buttons -->
     <section class="buttons">
         <div class="feed">
-            <button class="feed">
-                <h3 id="feed-me">
-                    FEED BLOOD
-                </h3>
-            </button>
+            <button id="feed">FEED BLOOD</button>
         </div>
         <div class="soul-suck">
-            <button class="soul-suck">
-                <h3 id="soul-suck">
-                    SUCK SOUL
-                </h3>
-            </button>
+            <button id="soul-suck">SUCK SOUL</button>
         </div>
         <div class="murder">
-            <button class="murder">
-                <h3 id="murder">
-                    MURDER 
-                </h3>
-            </button>
+            <button id="murder">MURDER </button>
         </div>
 </section>
     
