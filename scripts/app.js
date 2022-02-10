@@ -35,25 +35,46 @@ const level = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // start game function
 $('.start').on('click', () => {
     console.log("It Worked!");
-    setInterval(updateTimer, 1000);
+    setInterval(updateTimer, 1000)
+
+    
     
 
     // timers for levels
-    setInterval(ageLevel, 2000);
-    setInterval(hungerLevel, 3000);
-    setInterval(sleepLevel, 4000);
-    setInterval(boredomLevel, 2000);
+    // setInterval(ageLevel, 2000);
+    setInterval(hungerLevel, 2000);
+    setInterval(sleepLevel, 3000);
+    setInterval(boredomLevel, 2500);
 });
 
 const ageLevel= (num) => {
-    if(num < 70){
-        age++
-    } else {
-        age === 70 
-    };
-$('#age').text(`Age: ${age}`);
+    $('#age').text(`Age: ${age}`);
+    if(this > 10){
+        clearInterval(this);
+    }
+    
 };
 
+const ageDeath = () => {
+    if(hunger === level[9] || sleepiness === level[9] || boredom === level[9]){
+        clearInterval(ageLevel())
+        $('#age').text('DEATH')
+    }
+};
+
+/*   const ageLevel = () => {
+      console.log(timer)
+      if (timer < 5){
+        timer++
+      } if(timer > 5){ 
+      clearInterval(runTime);
+    
+    }
+    const runTime = setInterval(ageLevel, 1000)
+    $('#age-level').text(`Age: ${runTime}`)
+};
+ */
+  
 const hungerLevel = () => {
     
     // create a loop to 10
@@ -61,13 +82,12 @@ const hungerLevel = () => {
         // an if statement that stops the loop
         if(hunger !== level[9]){
             hunger++;
-       
-        }
-    
     // accessing the DOM to show the looping numbers
     $('#hunger-level').text(`Hunger: ${hunger}`);
     // stopping the looping number with a boolean
-    
+        } else if(hunger === level[9]){
+            $('#hunger-level').text('Death by hunger!!')
+        }
 
 
 };
@@ -79,11 +99,11 @@ const sleepLevel = () => {
         // an if statement that stops the array at 10
         if(sleepiness !== level[9]){
             sleepiness++;
+         // accessing the DOM to show the looping numbers
+        $('#sleepiness-level').text(`Sleepiness: ${sleepiness}`);
+        } else if (sleepiness === level[9]){
+            $('#sleepiness-level').text('Death by fatigue!!');
         } 
-    
-    // accessing the DOM to show the looping numbers
-    $('#sleepiness-level').text(`Sleepiness: ${sleepiness}`);
-    // stopping the looping number with a boolean
     
 // }
 
@@ -99,11 +119,10 @@ const boredomLevel = () => {
     
     // accessing the DOM to show the looping numbers
     $('#boredom-level').text(`Boredom: ${boredom}`);
-    // stopping the looping number with a boolean
-    
-// }
-
+} else if(boredom === level[9]){
+    $('#boredom-level').text(`Death by boredom!!`);
 }
+
 };
 
 $('#feed').on('click', () =>{
@@ -134,9 +153,10 @@ $('#murder').on('click', () =>{
         boredom--;
     } else if(boredom < level[0]){
         boredom === level[0];
-    };
+    } 
+    
     $('#boredom-level').text(`Boredom: ${boredom}`);
-    // each
+    // make an event unable to click murder anymore
 
 });
 
@@ -149,23 +169,25 @@ const updateTimer = () => {
     // update the DOM with the new time
     $('#timer').text('timer: ' + time);
 
-    // If the time gets to 10, add 1 to hunger
-    if(time === 1){
-        time = 0;
-        age++;
+    // If the time gets to 10, add age
+        age++
         ageLevel();
+        
+    
         // hunger++
         // sleepiness++
         // boredom++
-    }
+    } ;
 // hungerLevel();
-};
 
 
-// if age goes to 95, end game
+
+// if age goes to 70, end game
 
 // if hunger gets to 10, end game
 
 // if sleepiness gets to 10, end game
 
 // if boredom gets to 10, end game
+
+// 
