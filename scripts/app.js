@@ -42,12 +42,15 @@ $('.start').on('click', () => {
 
     // timers for levels
     // setInterval(ageLevel, 2000);
-    setInterval(hungerLevel, 500);
-    setInterval(sleepLevel, 500);
-    setInterval(boredomLevel, 500);
-    // setInterval(ageDeath, 2000);
+    setInterval(hungerLevel, 1000);
+    setInterval(sleepLevel, 2000);
+    setInterval(boredomLevel, 2400);
+    // setInterval(imageCycle, 2000);
 
-  imageBaby  
+/* imageBaby
+imageTeen
+imageAdult
+imageSenior  */ 
 });
 
 const ageLevel= (num) => {
@@ -217,23 +220,24 @@ const updateTimer = () => {
     } ;
 
 /* cycling through images */
-const imageBaby = () => {
-    $('main').show('#baby-demon')
+
+const imageCycle = () => {
+
+    if(age < 10){
+    $('.animation').show('.baby-demon');
+    
+    } else if(age < 10){
+    $('.animation').fadeOut('.baby-demon', 1000);   
+    $('.animaion').fadeIn('.teen-demon', 1000);
+    } else if (age > 10 && age < 20) {
+        $('.animation').fadeOut('.teen-demon', 1000);
+        $('.animation').fadeIn('.adult-demon');
+
+    } 
+
+    $('.demon').hide('.senior-demon')
 
 };
-
-const imageTeen = () => {
-    $('main').hide('#teen-demon')
-}
-
-const imageAdult = () => {
-    $('main').hide('#teen-demon')
-}
-
-const imageSenior = () => {
-    $('main').hide('#teen-demon')
-}
-
 // if age goes to 70, end game
 
 // if hunger gets to 10, end game
