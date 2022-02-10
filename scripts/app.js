@@ -35,7 +35,7 @@ const level = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // start game function
 $('.start').on('click', () => {
     console.log("It Worked!");
-    setInterval(updateTimer, 1000)
+    setInterval(updateTimer, 500)
 
     
     
@@ -46,7 +46,7 @@ $('.start').on('click', () => {
     setInterval(sleepLevel, 2000);
     setInterval(boredomLevel, 2400);
     // setInterval(imageCycle, 2000);
-
+    imageCycle;
 /* imageBaby
 imageTeen
 imageAdult
@@ -58,7 +58,8 @@ const ageLevel= (num) => {
     if(this > 10){
         clearInterval(this);
     }
-    
+    if(age > 10 && age <= 20 ){
+};
 };
 
 const ageDeath = () => {
@@ -76,6 +77,7 @@ const ageDeath = () => {
         $('#age').text('DEATH!!')
         $('#age').css('background-color', 'red')
     }
+    imageCycle();
 };
 
 /*   const ageLevel = () => {
@@ -222,20 +224,24 @@ const updateTimer = () => {
 /* cycling through images */
 
 const imageCycle = () => {
-
-    if(age < 10){
-    $('.animation').show('.baby-demon');
+    // console.log('image cycle running!')
     
-    } else if(age < 10){
-    $('.animation').fadeOut('.baby-demon', 1000);   
-    $('.animaion').fadeIn('.teen-demon', 1000);
-    } else if (age > 10 && age < 20) {
-        $('.animation').fadeOut('.teen-demon', 1000);
-        $('.animation').fadeIn('.adult-demon');
+    // teen demon
+    if(age > 10 && age < 18){
+        // console.log("age is greater than 5")
+    $('img').attr("src", "https://c.tenor.com/XFxjYA5cMWkAAAAC/devil-satan.gif")
+   
+    // adult demon
 
-    } 
+    } else if (age > 18 && age < 25) {
+    $('img').attr("src", "https://c.tenor.com/klaSh-3DkeAAAAAC/red-devil.gif")
+    
+// senior demon
+    } else if (age > 25 && age < 60) {
+        $('img').attr("src", "https://c.tenor.com/zmLTHkbjCYoAAAAd/nioh2-monster.gif") 
+    }
 
-    $('.demon').hide('.senior-demon')
+     
 
 };
 // if age goes to 70, end game
