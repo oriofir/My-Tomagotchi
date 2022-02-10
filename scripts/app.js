@@ -46,6 +46,8 @@ $('.start').on('click', () => {
     setInterval(sleepLevel, 500);
     setInterval(boredomLevel, 500);
     // setInterval(ageDeath, 2000);
+
+  imageBaby  
 });
 
 const ageLevel= (num) => {
@@ -66,7 +68,7 @@ const ageDeath = () => {
     } else if(age === 40 && age === 50 && age === 55 && age === 60){
         $('#age').text('I AM IMMORTAL AND FEAST ON THE BLOOD OF THE INNOCENT!')
         $('#age').css('background-color', 'red')
-    } else if(hunger === level[9] && sleepiness === level[9] && boredom === level[9]){
+    } else if(hunger === level[9] || sleepiness === level[9] || boredom === level[9]){
         clearInterval(ageLevel())
         $('#age').text('DEATH!!')
         $('#age').css('background-color', 'red')
@@ -216,9 +218,22 @@ const updateTimer = () => {
 
 /* cycling through images */
 const imageBaby = () => {
-    $('#baby-demon').hide()
+    $('main').show('#baby-demon')
 
+};
+
+const imageTeen = () => {
+    $('main').hide('#teen-demon')
 }
+
+const imageAdult = () => {
+    $('main').hide('#teen-demon')
+}
+
+const imageSenior = () => {
+    $('main').hide('#teen-demon')
+}
+
 // if age goes to 70, end game
 
 // if hunger gets to 10, end game
