@@ -45,6 +45,7 @@ $('.start').on('click', () => {
     setInterval(hungerLevel, 2000);
     setInterval(sleepLevel, 3000);
     setInterval(boredomLevel, 2500);
+    // setInterval(ageDeath, 2000);
 });
 
 const ageLevel= (num) => {
@@ -58,7 +59,17 @@ const ageLevel= (num) => {
 const ageDeath = () => {
     if(hunger === level[9] || sleepiness === level[9] || boredom === level[9]){
         clearInterval(ageLevel())
-        $('#age').text('DEATH')
+        $('#age').text('DEATH!!')
+        $('#age').css('background-color', 'red')
+    } else if(age === 10 || age === 20 || age === 30){
+        $('#age').text('I GROW!') 
+        $('#age').css('background-color', 'red')
+    } else if(age === 25 || age === 35 || age === 45){
+        $('#age').text('I AM A DEMON, YOU CANNOT KILL ME!')
+        $('#age').css('background-color', 'red')
+    } else if(age === 40 || age === 50 || age === 55 || age === 60){
+        $('#age').text('I AM IMMORTAL AND FEAST ON THE BLOOD OF THE INNOCENT!')
+        $('#age').css('background-color', 'red')
     }
 };
 
@@ -131,7 +142,9 @@ $('#feed').on('click', () =>{
         hunger--;
     } else if(hunger < level[0]){
         hunger === level[0]
-    };
+    } else if (hunger === level[9]){
+        document.getElementById('#feed').disabled = true;   
+    }
     $('#hunger-level').text(`Hunger: ${hunger}`);
 
 });
@@ -172,6 +185,8 @@ const updateTimer = () => {
     // If the time gets to 10, add age
         age++
         ageLevel();
+        ageDeath();
+        setInterval(ageDeath, 3000);
         
     
         // hunger++
