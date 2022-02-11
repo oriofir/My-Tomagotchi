@@ -73,7 +73,7 @@ const ageDeath = () => {
         $('#age').text('I AM IMMORTAL AND FEAST ON THE BLOOD OF THE INNOCENT!')
         $('#age').css('background-color', 'red')
     } else if(hunger === level[9] || sleepiness === level[9] || boredom === level[9]){
-        clearInterval(ageLevel())
+        clearInterval(ageLevel)
         $('#age').text('DEATH!!')
         $('#age').css('background-color', 'red')
     }
@@ -105,6 +105,8 @@ const hungerLevel = () => {
     // stopping the looping number with a boolean
         } else if(hunger === level[9]){
             $('#hunger-level').text('Death by hunger!!')
+            $('#age').text('DEATH!!')
+            $('#age').css('background-color', 'red')
         }
 
 
@@ -121,6 +123,8 @@ const sleepLevel = () => {
         $('#sleepiness-level').text(`Sleepiness: ${sleepiness}`);
         } else if (sleepiness === level[9]){
             $('#sleepiness-level').text('Death by fatigue!!');
+            $('#age').text('DEATH!!')
+            $('#age').css('background-color', 'red')
         } 
     
 // }
@@ -139,6 +143,8 @@ const boredomLevel = () => {
     $('#boredom-level').text(`Boredom: ${boredom}`);
 } else if(boredom === level[9]){
     $('#boredom-level').text(`Death by boredom!!`);
+    $('#age').text('DEATH!!')
+    $('#age').css('background-color', 'red')
 }
 
 };
@@ -215,7 +221,7 @@ const updateTimer = () => {
         age++
         ageLevel();
         ageDeath();
-        setInterval(ageDeath, 3000);
+        // setInterval(ageDeath, 3000);
         // hunger++
         // sleepiness++
         // boredom++
@@ -240,10 +246,13 @@ const imageCycle = () => {
     } else if (age > 25 && age < 60) {
         $('img').attr("src", "https://c.tenor.com/zmLTHkbjCYoAAAAd/nioh2-monster.gif") 
     }
-
-     
-
 };
+
+const nameChange = () => {
+    $("input").attr("h1", " ")
+};
+
+$("h1").click(nameChange);
 // if age goes to 70, end game
 
 // if hunger gets to 10, end game
