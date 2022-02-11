@@ -33,7 +33,7 @@ const level = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
 // start game function
-$('.start').on('click', () => {
+$('#start').on('click', () => {
     console.log("It Worked!");
     setInterval(updateTimer, 500)
 
@@ -105,7 +105,8 @@ const hungerLevel = () => {
     // stopping the looping number with a boolean
         } else if(hunger === level[9]){
             $('#hunger-level').text('Death by hunger!!')
-        
+            $('#age').text('DEATH!!')
+            $('#age').css('background-color', 'red')
         }
 
 
@@ -122,7 +123,8 @@ const sleepLevel = () => {
         $('#sleepiness-level').text(`Sleepiness: ${sleepiness}`);
         } else if (sleepiness === level[9]){
             $('#sleepiness-level').text('Death by fatigue!!');
-            
+            $('#age').text('DEATH!!')
+            $('#age').css('background-color', 'red')
         } 
     
 // }
@@ -164,7 +166,7 @@ $('#feed').on('click', () =>{
        $('#feed').hide();
     })
  }
- 
+ $('#feed').css('animate__bounce', '0.5s');
 
 });
 
@@ -235,17 +237,17 @@ const imageCycle = () => {
     // console.log('image cycle running!')
     
     // teen demon
-    if(age > 10 && age < 18){
+    if(age > 10 && age < 25){
         // console.log("age is greater than 5")
     $('img').attr("src", "https://c.tenor.com/XFxjYA5cMWkAAAAC/devil-satan.gif")
    
     // adult demon
 
-    } else if (age > 18 && age < 25) {
+    } else if (age > 25 && age < 45) {
     $('img').attr("src", "https://c.tenor.com/klaSh-3DkeAAAAAC/red-devil.gif")
     
 // senior demon
-    } else if (age > 25 && age < 60) {
+    } else if (age > 35 && age < 60) {
         $('img').attr("src", "https://c.tenor.com/zmLTHkbjCYoAAAAd/nioh2-monster.gif") 
     }
 };

@@ -10,6 +10,10 @@
   rel="stylesheet"
   href="https://unpkg.com/98.css"
 >
+
+<!-- Font -->
+<link rel="stylesheet" href="https://use.typekit.net/yty6ilk.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="style/main.css">
 
@@ -32,11 +36,13 @@
   crossorigin="anonymous"></script>
 
 
-<!-- Scripts -->
+
     <script src="scripts/app.js" defer></script>
     
     <title>My Little Demon</title>
 </head>
+
+
 <body>
     <header class="My-Tomagotchi">
         <h1>My Little Demon</h1>
@@ -45,14 +51,14 @@
             <h3></h3>
         
             <form >
-              <input type="text" id="commentInput">
-              <button id="commentButton" >Add Name</button>
+              <input type="text" id="commentInput" autofocus>
+              <button id="commentButton">Add Name</button>
             </form>
         
           </section>
           <!-- code copied from dom events lecture -->
 
-        <button class="start">Start Game</button>
+        <button id="start">Start Game</button>
     </header>
    
     <main class="tomagotchi">
@@ -61,16 +67,14 @@
         <!-- Screen -->
     <section class="screen">
         <!-- <span id="timer">timer: 0</span> -->
-        <figure class="animation">
+        
+    <figure class="animation">
         <div class="demon">
             <img src="https://c.tenor.com/UWSFumXilO4AAAAC/devil-child.gif" alt="baby demon">
-        </div>
+    </div>
         </figure>
         <div class="game-over"></div>
-    </section> 
-    
-    <!-- Stats -->
-    <section class="stats-main">
+        <section class="stats-main">
             <div class="age">
                 <h2 id="age">
                     Age: 0
@@ -92,6 +96,10 @@
                 </h3>
             </div>
     </section>
+    </section> 
+    
+ 
+  
 
     <!-- buttons -->
     <section class="buttons">
