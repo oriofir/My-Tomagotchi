@@ -166,7 +166,11 @@ $('#feed').on('click', () =>{
        $('#feed').hide();
     })
  }
+ $('#feed').css('animate__bounce', '0.5s');
+
 });
+
+
 
 
 $('#soul-suck').on('click', () =>{
@@ -207,7 +211,7 @@ $('#murder').on('click', () =>{
             $('#murder').hide();
          })
       }
-     });
+    });
 
 
 const updateTimer = () => {
@@ -248,11 +252,28 @@ const imageCycle = () => {
     }
 };
 
-const nameChange = () => {
-    $("input").attr("h1", " ")
-};
+// copied from dom events notes
+document.querySelector("#commentButton").addEventListener("click", function(event){
+    // prevent default
+    // lets us prevent the default submission of a form
+    event.preventDefault();
 
-$("h1").click(nameChange);
+    // this will stop the parent event trigger
+    event.stopPropagation();
+
+    // get user input
+    const userInput = document.querySelector("#commentInput").value
+
+    // create an element?
+    const newComment = document.createElement("h3");
+    newComment.textContent = userInput;
+
+    // place element on page
+    document.querySelector("h3").append(newComment); //this takes in a node
+
+    document.querySelector("#commentInput").value = "";
+
+})
 // if age goes to 70, end game
 
 // if hunger gets to 10, end game

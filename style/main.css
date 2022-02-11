@@ -6,7 +6,9 @@
 body {
     min-height: 300px;
     max-height: 1000px;
+    box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
 }
 
 main {
@@ -19,12 +21,19 @@ main {
     align-items: center;
 }
 
+h1 {
+    text-align: center;
+}
+
+
+
 
 .start {
     border-radius: 35px;
     width: 100px;
     height: 50px;
     background-size: 100px;
+    margin: 20px;
 }
 
 
@@ -33,7 +42,11 @@ main {
 .screen {
     display: flex;
     background-color: rgb(173, 224, 143);
-    width: fit-content;
+}
+
+.demon {
+    display: flex;
+
 }
 
 .stats-main{
@@ -50,4 +63,20 @@ main {
     padding: 20px;
     align-items: center;
     gap: 20px;
+   
 }
+
+#murder, #soul-suck, #feed {
+    border-radius: 35px;
+    box-shadow: 9px 13px 15px 5px rgba(0,0,0,0.83); 
+box-shadow: 9px 13px 15px 5px rgba(0,0,0,0.83);
+
+}
+
+#murder:hover {
+    animation: bounce 1s;
+    
+}
+
+
+

@@ -12,6 +12,14 @@
 >
     <!-- CSS -->
     <link rel="stylesheet" href="style/main.css">
+    
+    <!-- CSS animators -->
+   <head>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
 
     <!-- Jquery Scripts -->
     <script
@@ -28,11 +36,17 @@
 <body>
     <header class="My-Tomagotchi">
         <h1>My Little Demon</h1>
-        <form>
-            <input type="text" id="NameInput">
-            <button id="commentButton" > Add Name</button>
-            <article>My Demon Name</article>
-        </form>
+       
+        <section class="name">
+            <h3></h3>
+        
+            <form >
+              <input type="text" id="commentInput">
+              <button id="commentButton" >Add Name</button>
+            </form>
+        
+          </section>
+          <!-- code copied from dom events lecture -->
 
         <button class="start">Start Game</button>
     </header>
