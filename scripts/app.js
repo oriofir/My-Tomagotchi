@@ -75,7 +75,7 @@ const ageDeath = () => {
     } else if(hunger === level[9] || sleepiness === level[9] || boredom === level[9]){
         clearInterval(ageLevel)
         $('#age').text('DEATH!!')
-        $('#age').css('background-color', 'red')
+        
     }
     imageCycle();
 };
@@ -106,7 +106,7 @@ const hungerLevel = () => {
         } else if(hunger === level[9]){
             $('#hunger-level').text('Death by hunger!!')
             $('#age').text('DEATH!!')
-            $('#age').css('background-color', 'red')
+            
         }
 
 
@@ -124,7 +124,7 @@ const sleepLevel = () => {
         } else if (sleepiness === level[9]){
             $('#sleepiness-level').text('Death by fatigue!!');
             $('#age').text('DEATH!!')
-            $('#age').css('background-color', 'red')
+            
         } 
     
 // }
@@ -144,7 +144,7 @@ const boredomLevel = () => {
 } else if(boredom === level[9]){
     $('#boredom-level').text(`Death by boredom!!`);
     $('#age').text('DEATH!!')
-    $('#age').css('background-color', 'red')
+
 }
 
 };
