@@ -265,11 +265,11 @@ document.querySelector("#commentButton").addEventListener("click", function(even
     const userInput = document.querySelector("#commentInput").value
 
     // create an element?
-    const newComment = document.createElement("h3");
+    const newComment = document.createElement("h2");
     newComment.textContent = userInput;
 
     // place element on page
-    document.querySelector("h3").append(newComment); //this takes in a node
+    document.querySelector("#name-list").append(newComment); //this takes in a node
 
     document.querySelector("#commentInput").value = "";
 
