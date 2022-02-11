@@ -105,8 +105,7 @@ const hungerLevel = () => {
     // stopping the looping number with a boolean
         } else if(hunger === level[9]){
             $('#hunger-level').text('Death by hunger!!')
-            $('#age').text('DEATH!!')
-            $('#age').css('background-color', 'red')
+        
         }
 
 
@@ -123,8 +122,7 @@ const sleepLevel = () => {
         $('#sleepiness-level').text(`Sleepiness: ${sleepiness}`);
         } else if (sleepiness === level[9]){
             $('#sleepiness-level').text('Death by fatigue!!');
-            $('#age').text('DEATH!!')
-            $('#age').css('background-color', 'red')
+            
         } 
     
 // }
@@ -166,7 +164,7 @@ $('#feed').on('click', () =>{
        $('#feed').hide();
     })
  }
- $('#feed').css('animate__bounce', '0.5s');
+ 
 
 });
 
